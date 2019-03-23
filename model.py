@@ -13,15 +13,15 @@ def make_ner_model(embedding_tensor, words_vocab_size, tags_vocab_size,
     words_input = Input(dtype='int32', shape=[MAX_SEQUENCE_LENGTH])
 
     x = Embedding(words_vocab_size + 1,
-                  EMBEDDING_DIM,
-                  weights=[embedding_tensor],
-                  input_length=MAX_SEQUENCE_LENGTH,
-                  trainable=False)(words_input)
+                    EMBEDDING_DIM,
+                    weights=[embedding_tensor],
+                    input_length=MAX_SEQUENCE_LENGTH,
+                    trainable=False)(words_input)
 
     outputs = GRU(num_hidden_units,
-                  return_sequences=True,
-                  dropout=0.5,
-                  name='RNN_Layer')(x)
+                    return_sequences=True,
+                    dropout=0.5,
+                    name='RNN_Layer')(x)
 
     # Simple attention
     hidden_layer = Dense(attention_units, activation='tanh')(outputs)

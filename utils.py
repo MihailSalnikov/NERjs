@@ -31,10 +31,6 @@ def load_data(path, word_preprocessor=word_preprocessor):
                 data['words'].append(words)
                 data['tags'].append(tags)
                 words, tags = [], []
-    
-    def toNERtags(tags):
-        return tags
-    data['tags'] = [toNERtags(tags) for tags in data['tags']]
 
     return data
 
