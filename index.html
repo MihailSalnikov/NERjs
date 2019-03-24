@@ -25,6 +25,9 @@
         .tags-review {
             margin-top: 1.5rem;
         }
+        .hide {
+            display: none;
+        }
     </style>
     <title>NER SimpleRNN</title>
 </head>
@@ -45,7 +48,7 @@
                         <span class="sr-only">Loading...</span>
                     </div>
                 </h1>
-                <form class="form" onkeypress="return event.keyCode != 13;">
+                <form class="form hide" onkeypress="return event.keyCode != 13;">
                     <div class="form-group mx-sm-3 md-2">
                         <input type="text" class="form-control form-control-xs" id='input_text' placeholder="I Like Moscow!">
                     </div>
