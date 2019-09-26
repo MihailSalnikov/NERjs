@@ -18,4 +18,4 @@ tensorflow-gpu==1.12.0
 tensorflow-hub==0.1.1
 tensorflowjs==0.8.0
 termcolor==1.1.0
-Werkzeug==0.14.1
+Werkzeug==0.15.3
